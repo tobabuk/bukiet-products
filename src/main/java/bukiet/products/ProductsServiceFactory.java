@@ -5,7 +5,7 @@ import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductsServiceFactory {
-    public ProductsService create(){
+    public ProductsService create() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://dummyjson.com/")
                 // Configure Retrofit to use Gson to turn the Json into Objects

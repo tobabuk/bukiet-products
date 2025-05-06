@@ -44,7 +44,8 @@ public class ProductsController {
                 imageLabels[i].addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        SwingUtilities.invokeLater(() -> new ProductsPopUp(fullImageIconFinal, title, price, description));
+                        SwingUtilities.invokeLater(()
+                                -> new ProductsPopUp(fullImageIconFinal, title, price, description));
 
                     }
                 });
