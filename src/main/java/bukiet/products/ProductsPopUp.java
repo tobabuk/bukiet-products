@@ -10,8 +10,6 @@ public class ProductsPopUp extends JFrame {
 
         setSize(400, 600);
 
-
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         Image img = fullImage.getImage();
