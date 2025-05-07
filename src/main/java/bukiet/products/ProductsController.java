@@ -37,13 +37,14 @@ public class ProductsController {
                 String description = product.description;
 
                 ImageIcon thumbnailImage = new ImageIcon(image);
-                ImageIcon fullImage = new ImageIcon(image2);
                 imageLabels[i].setIcon(thumbnailImage);
-                final ImageIcon fullImageIconFinal = fullImage;
+
 
                 imageLabels[i].addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
+                        ImageIcon fullImage = new ImageIcon(image2);
+                        final ImageIcon fullImageIconFinal = fullImage;
                         SwingUtilities.invokeLater(()
                                 -> new ProductsPopUp(fullImageIconFinal, title, price, description));
 

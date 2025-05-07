@@ -10,6 +10,6 @@ class ProductsServiceTest {
     void getProducts() {
         ProductsService service = new ProductsServiceFactory().create();
         ProductsResponse products = service.getProducts().blockingGet();
-            assertTrue(products.products.length > 0);
+        assertTrue(products.products.length > 0);
     }
 }

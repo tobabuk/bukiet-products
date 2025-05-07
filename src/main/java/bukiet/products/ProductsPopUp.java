@@ -20,7 +20,7 @@ public class ProductsPopUp extends JFrame {
 
         JLabel titleLabel = new JLabel(title);
         JLabel priceLabel = new JLabel("$" + price);
-        JLabel descriptionLabel = new JLabel("Product Description" + description);
+        JLabel descriptionLabel = new JLabel("Product Description: " + description);
 
         panel.add(titleLabel);
         panel.add(descriptionLabel);
