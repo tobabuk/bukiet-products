@@ -31,7 +31,7 @@ public class ProductsController {
                 URL url2 = new URL(imageUrl);
                 //downloads the image from the internet
                 Image image = ImageIO.read(url);
-                Image image2 = ImageIO.read(url2);
+
                 String title = product.title;
                 double price = product.price;
                 String description = product.description;
@@ -43,6 +43,12 @@ public class ProductsController {
                 imageLabels[i].addMouseListener(new MouseAdapter() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
+                        Image image2 = null;
+                        try {
+                            image2 = ImageIO.read(url2);
+                        } catch (IOException ex) {
+                            throw new RuntimeException(ex);
+                        }
                         ImageIcon fullImage = new ImageIcon(image2);
                         final ImageIcon fullImageIconFinal = fullImage;
                         SwingUtilities.invokeLater(()
